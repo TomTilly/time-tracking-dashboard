@@ -17,6 +17,7 @@ module.exports = {
         'dark-blue': 'hsl(235, 46%, 20%)',
         'desaturated-blue': 'hsl(235, 45%, 61%)',
         'pale-blue': 'hsl(236, 100%, 87%)',
+        'violet-blue': 'hsl(246, 80%, 60%)'
       },
     },
     fontWeight: {

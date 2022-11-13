@@ -1,10 +1,10 @@
 export enum Durations {
-  daily = 'daily',
-  weekly = 'weekly',
-  monthly = 'monthly',
+  daily = 'Daily',
+  weekly = 'Weekly',
+  monthly = 'Monthly',
 }
 
-export enum ActivityTypes {
+export enum ActivityCategories {
   work = 'Work',
   play = 'Play',
   study = 'Study',
@@ -13,8 +13,8 @@ export enum ActivityTypes {
   selfCare = 'Self Care',
 }
 
-export type ActivityType = {
-  title: ActivityTypes;
+export type Activity = {
+  title: ActivityCategories;
   timeframes: {
     [Duration in Durations]: {
       current: number;
@@ -23,106 +23,104 @@ export type ActivityType = {
   };
 };
 
-export type ActivitiesType = ActivityType[];
-
-const activities: ActivitiesType = [
+const activities: Activity[] = [
   {
-    title: ActivityTypes.work,
+    title: ActivityCategories.work,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 5,
         previous: 7,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 32,
         previous: 36,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 103,
         previous: 128,
       },
     },
   },
   {
-    title: ActivityTypes.exercise,
+    title: ActivityCategories.play,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 1,
         previous: 2,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 10,
         previous: 8,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 23,
         previous: 29,
       },
     },
   },
   {
-    title: ActivityTypes.study,
+    title: ActivityCategories.study,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 0,
         previous: 1,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 4,
         previous: 7,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 13,
         previous: 19,
       },
     },
   },
   {
-    title: ActivityTypes.exercise,
+    title: ActivityCategories.exercise,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 1,
         previous: 1,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 4,
         previous: 5,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 11,
         previous: 18,
       },
     },
   },
   {
-    title: ActivityTypes.social,
+    title: ActivityCategories.social,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 1,
         previous: 3,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 5,
         previous: 10,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 21,
         previous: 23,
       },
     },
   },
   {
-    title: ActivityTypes.selfCare,
+    title: ActivityCategories.selfCare,
     timeframes: {
-      daily: {
+      [Durations.daily]: {
         current: 0,
         previous: 1,
       },
-      weekly: {
+      [Durations.weekly]: {
         current: 2,
         previous: 2,
       },
-      monthly: {
+      [Durations.monthly]: {
         current: 7,
         previous: 11,
       },
