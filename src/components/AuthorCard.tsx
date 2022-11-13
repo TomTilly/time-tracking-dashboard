@@ -1,14 +1,16 @@
 import Avatar from './Avatar';
+import { User } from '@/data';
 
-const AuthorCard = () => {
+const AuthorCard = ({ user }: { user: User }) => {
+  const { firstName, lastName, avatarSrc } = user;
   return (
-    <div className="bg-violet-blue p-8 rounded-xl">
-      <Avatar />
-      <h1 className="text-4xl font-light">
-        <span className="text-base block">Report for</span>
-        Jeremy
+    <div className="bg-violet-blue p-8 rounded-xl grow space-y-12">
+      <Avatar imgSrc={avatarSrc} />
+      <h1 className="text-4xl font-light leading-tight">
+        <span className="text-base block text-pale-blue">Report for</span>
+        {firstName}
         <br />
-        Robson
+        {lastName}
       </h1>
     </div>
   );

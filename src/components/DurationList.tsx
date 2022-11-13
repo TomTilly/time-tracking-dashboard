@@ -11,10 +11,15 @@ export default function DurationList({
   setDuration: Dispatch<SetStateAction<Durations>>;
 }) {
   return (
-    <ul role="list">
+    <ul className="p-8" role="list">
       {durationStrings.map((duration) => (
         <li key={duration}>
-          <button>{duration}</button>
+          <button
+            className="py-2 text-pale-blue hover:text-white aria-selected:text-white"
+            aria-selected={duration === selectedDuration}
+          >
+            {duration}
+          </button>
         </li>
       ))}
     </ul>
