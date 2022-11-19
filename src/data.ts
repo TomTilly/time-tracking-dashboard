@@ -1,12 +1,12 @@
 import jeremyImgSrc from '@assets/image-jeremy.png';
 
 export enum Durations {
-  daily = 'Daily',
-  weekly = 'Weekly',
-  monthly = 'Monthly',
+  daily = 'daily',
+  weekly = 'weekly',
+  monthly = 'monthly',
 }
 
-export enum ActivityCategories {
+export enum ActivityType {
   work = 'Work',
   play = 'Play',
   study = 'Study',
@@ -15,8 +15,40 @@ export enum ActivityCategories {
   selfCare = 'Self Care',
 }
 
+export type ActivityStyling = {
+  accentColor: string;
+  icon: string;
+};
+
+export const activityStyling: Record<ActivityType, ActivityStyling> = {
+  [ActivityType.work]: {
+    accentColor: 'bg-orange',
+    icon: `bg-[url(url('/icon-work.svg')]`,
+  },
+  [ActivityType.play]: {
+    icon: "bg-[url('/icon-play.svg')]",
+    accentColor: 'bg-blue',
+  },
+  [ActivityType.study]: {
+    icon: "bg-[url('/icon-study.svg')]",
+    accentColor: 'bg-red',
+  },
+  [ActivityType.exercise]: {
+    icon: "bg-[url('/icon-exercise.svg')]",
+    accentColor: 'bg-green',
+  },
+  [ActivityType.social]: {
+    icon: "bg-[url('/icon-social.svg')]",
+    accentColor: 'bg-purple',
+  },
+  [ActivityType.selfCare]: {
+    icon: "bg-[url('/icon-self-care.svg')]",
+    accentColor: 'bg-yellow',
+  },
+};
+
 export type Activity = {
-  title: ActivityCategories;
+  title: ActivityType;
   timeframes: {
     [Duration in Durations]: {
       current: number;
@@ -29,6 +61,7 @@ export type User = {
   firstName: string;
   lastName: string;
   avatarSrc: string;
+  id: string;
 };
 
 export type Account = {
@@ -41,10 +74,11 @@ const testAccount: Account = {
     firstName: 'Jeremy',
     lastName: 'Robson',
     avatarSrc: jeremyImgSrc,
+    id: '1',
   },
   activities: [
     {
-      title: ActivityCategories.work,
+      title: ActivityType.work,
       timeframes: {
         [Durations.daily]: {
           current: 5,
@@ -61,7 +95,7 @@ const testAccount: Account = {
       },
     },
     {
-      title: ActivityCategories.play,
+      title: ActivityType.play,
       timeframes: {
         [Durations.daily]: {
           current: 1,
@@ -78,7 +112,7 @@ const testAccount: Account = {
       },
     },
     {
-      title: ActivityCategories.study,
+      title: ActivityType.study,
       timeframes: {
         [Durations.daily]: {
           current: 0,
@@ -95,7 +129,7 @@ const testAccount: Account = {
       },
     },
     {
-      title: ActivityCategories.exercise,
+      title: ActivityType.exercise,
       timeframes: {
         [Durations.daily]: {
           current: 1,
@@ -112,7 +146,7 @@ const testAccount: Account = {
       },
     },
     {
-      title: ActivityCategories.social,
+      title: ActivityType.social,
       timeframes: {
         [Durations.daily]: {
           current: 1,
@@ -129,7 +163,7 @@ const testAccount: Account = {
       },
     },
     {
-      title: ActivityCategories.selfCare,
+      title: ActivityType.selfCare,
       timeframes: {
         [Durations.daily]: {
           current: 0,

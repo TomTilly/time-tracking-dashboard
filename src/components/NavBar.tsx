@@ -13,7 +13,7 @@ const NavBar = ({
   user: User;
 }) => {
   return (
-    <div className="bg-dark-blue rounded-xl overflow-hidden flex flex-col">
+    <div className="bg-dark-blue rounded-xl overflow-hidden flex flex-col row-span-2">
       <AuthorCard user={user} />
       <DurationList
         selectedDuration={selectedDuration}

@@ -17,7 +17,18 @@ module.exports = {
         'dark-blue': 'hsl(235, 46%, 20%)',
         'desaturated-blue': 'hsl(235, 45%, 61%)',
         'pale-blue': 'hsl(236, 100%, 87%)',
-        'violet-blue': 'hsl(246, 80%, 60%)'
+        'violet-blue': 'hsl(246, 80%, 60%)',
+      },
+      backgroundImage: {
+        'icon-exercise': "url('/icon-exercise')",
+        'icon-play': "url('/icon-play')",
+        'icon-self-care': "url('/icon-self-care')",
+        'icon-social': "url('/icon-social')",
+        'icon-study': "url('/icon-study')",
+        'icon-work': "url('/icon-work')",
+      },
+      borderRadius: {
+        card: defaultTheme.borderRadius.xl
       },
     },
     fontWeight: {
