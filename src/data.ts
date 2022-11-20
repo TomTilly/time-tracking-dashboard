@@ -1,4 +1,10 @@
 import jeremyImgSrc from '@assets/image-jeremy.png';
+import iconExercise from '@assets/icon-exercise.svg';
+import iconPlay from '@assets/icon-play.svg';
+import iconSelfCare from '@assets/icon-self-care.svg';
+import iconSocial from '@assets/icon-social.svg';
+import iconStudy from '@assets/icon-study.svg';
+import iconWork from '@assets/icon-work.svg';
 
 export enum Durations {
   daily = 'daily',
@@ -23,26 +29,32 @@ export type ActivityStyling = {
 export const activityStyling: Record<ActivityType, ActivityStyling> = {
   [ActivityType.work]: {
     accentColor: 'bg-orange',
-    icon: `bg-[url(url('/icon-work.svg')]`,
+    // icon: `bg-[url('/icon-work.svg')]`,
+    icon: iconWork,
   },
   [ActivityType.play]: {
-    icon: "bg-[url('/icon-play.svg')]",
+    // icon: "bg-[url('/icon-play.svg')]",
+    icon: iconPlay,
     accentColor: 'bg-blue',
   },
   [ActivityType.study]: {
-    icon: "bg-[url('/icon-study.svg')]",
+    // icon: "bg-[url('/icon-study.svg')]",
+    icon: iconStudy,
     accentColor: 'bg-red',
   },
   [ActivityType.exercise]: {
-    icon: "bg-[url('/icon-exercise.svg')]",
+    // icon: "bg-[url('/icon-exercise.svg')]",
+    icon: iconExercise,
     accentColor: 'bg-green',
   },
   [ActivityType.social]: {
-    icon: "bg-[url('/icon-social.svg')]",
+    // icon: "bg-[url('/icon-social.svg')]",
+    icon: iconSocial,
     accentColor: 'bg-purple',
   },
   [ActivityType.selfCare]: {
-    icon: "bg-[url('/icon-self-care.svg')]",
+    // icon: "bg-[url('/icon-self-care.svg')]",
+    icon: iconSelfCare,
     accentColor: 'bg-yellow',
   },
 };

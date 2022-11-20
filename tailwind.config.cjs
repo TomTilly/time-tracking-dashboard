@@ -27,6 +27,9 @@ module.exports = {
         'icon-study': "url('/icon-study')",
         'icon-work': "url('/icon-work')",
       },
+      backgroundSize: {
+        '50%': '50%',
+      },
       borderRadius: {
         card: defaultTheme.borderRadius.xl
       },
