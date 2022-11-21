@@ -14,6 +14,12 @@ export default function ActivityCard({
 }) {
   const { title, timeframes } = activity;
   const { current, previous } = timeframes[selectedDuration];
+  const prevDurationLabels = {
+    daily: 'Yesterday',
+    weekly: 'Last Week',
+    monthly: 'Last Month',
+  };
+
   return (
     <div className="rounded-xl flex flex-col overflow-hidden">
       {/* Need to include this extra div due to a border-radius background bleed bug:
@@ -34,7 +40,7 @@ export default function ActivityCard({
         <div className="flex md:flex-col justify-between items-center md:items-start gap-2">
           <p className="text-4xl lg:text-6xl font-light">{current}hrs</p>
           <p className="text-pale-blue text-base text-right md:test-left">
-            Last Week - {previous}hrs
+            {prevDurationLabels[selectedDuration]} - {previous}hrs
           </p>
         </div>
       </div>
