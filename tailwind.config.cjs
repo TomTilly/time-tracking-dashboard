@@ -19,14 +19,6 @@ module.exports = {
         'pale-blue': 'hsl(236, 100%, 87%)',
         'violet-blue': 'hsl(246, 80%, 60%)',
       },
-      backgroundImage: {
-        'icon-exercise': "url('/icon-exercise')",
-        'icon-play': "url('/icon-play')",
-        'icon-self-care': "url('/icon-self-care')",
-        'icon-social': "url('/icon-social')",
-        'icon-study': "url('/icon-study')",
-        'icon-work': "url('/icon-work')",
-      },
       backgroundSize: {
         '50%': '50%',
       },

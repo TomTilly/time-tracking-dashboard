@@ -4,6 +4,7 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/time-tracking-dashboard/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

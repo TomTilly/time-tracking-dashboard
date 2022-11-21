@@ -33,7 +33,7 @@ export default function ActivityCard({
         </div>
         <div className="flex md:flex-col justify-between items-center md:items-start gap-2">
           <p className="text-4xl lg:text-6xl font-light">{current}hrs</p>
-          <p className="text-pale-blue text-base text-right">
+          <p className="text-pale-blue text-base text-right md:test-left">
             Last Week - {previous}hrs
           </p>
         </div>
