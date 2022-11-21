@@ -10,7 +10,7 @@ function App() {
   const [duration, setDuration] = useState<Durations>(Durations.weekly);
   return (
     <main className="py-12 px-4">
-      <div className="grid md:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-4 gap-8 max-w-[1000px] mx-auto">
         <NavBar
           setDuration={setDuration}
           selectedDuration={duration}
